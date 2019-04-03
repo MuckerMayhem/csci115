@@ -6,10 +6,17 @@ var x = (function () {
         console.log("counter is " + counter);
 
         if (document.getElementById(id).innerHTML === "ACTIVE") {
+            document.getElementById((id).innerHTML = "Button");
             counter++;
             console.log("hit active button.");
+            console.log("time is: " + time);
 
             document.getElementById("points").innerHTML = "" + counter;
+            if (document.getElementById("points").innerHTML >= 5) {
+                clearInterval(t);
+                time = time - document.getElementById("points").innerHTML * 2;
+                t = setInterval(y, time);
+            }
             y();
             clearInterval(t);
             t = setInterval(y, time);
@@ -26,6 +33,9 @@ var y = (function () {
 
         button = Math.floor(Math.random() * 16);
         if (lastButton === button) button++;
+
+        if (button > 16) button = 0;
+
         lastButton = button;
         console.log(button);
         document.getElementById("but" + button).innerHTML = "ACTIVE";
