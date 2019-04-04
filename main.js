@@ -39,6 +39,12 @@ var y = (function () {
         lastButton = button;
         console.log(button);
         document.getElementById("but" + button).innerHTML = "ACTIVE";
+
+        var points = document.getElementById("points").innerHTML;
+
+        if (points > 5) {
+
+        }
     }
 
 })();
