@@ -7,11 +7,12 @@ var clickButton = (function () {
 
         if (document.getElementById(id).innerHTML === "ACTIVE") {
             document.getElementById((id).innerHTML = "Button");
-            counter++;
+            counter = counter + parseInt(document.getElementById("pph").value);
             console.log("hit active button.");
-            console.log("time is: " + time);
+            //document.getElementById("pph").value =
+            document.getElementById("points").innerHTML = "" + counter;
 
-            document.getElementById("points").innerHTML = "" + counter + document.getElementById("pph").value - 1;
+            console.log("time is: " + time);
             if (document.getElementById("points").innerHTML >= 5) {
                 clearInterval(t);
 
