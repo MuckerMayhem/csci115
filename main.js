@@ -1,6 +1,6 @@
 var time = 2000;
 
-var x = (function () {
+var clickButton = (function () {
     let counter = 0;
     return function (id) {
         console.log("counter is " + counter);
@@ -11,21 +11,22 @@ var x = (function () {
             console.log("hit active button.");
             console.log("time is: " + time);
 
-            document.getElementById("points").innerHTML = "" + counter;
+            document.getElementById("points").innerHTML = "" + counter + document.getElementById("pph").value - 1;
             if (document.getElementById("points").innerHTML >= 5) {
                 clearInterval(t);
-                time = time - document.getElementById("points").innerHTML * 2;
-                t = setInterval(y, time);
+
+                time = time - document.getElementById("points").innerHTML * document.getElementById("speed").value;
+                t = setInterval(setNextButton, time);
             }
-            y();
+            setNextButton();
             clearInterval(t);
-            t = setInterval(y, time);
+            t = setInterval(setNextButton, time);
         }
         return counter;
     }
 })();
 
-var y = (function () {
+var setNextButton = (function () {
     var button = 0;
     var lastButton = -1;
     return function () {
@@ -34,7 +35,7 @@ var y = (function () {
         button = Math.floor(Math.random() * 16);
         if (lastButton === button) button++;
 
-        if (button > 16) button = 0;
+        if (button > 15) button = 0;
 
         lastButton = button;
         console.log(button);
@@ -44,4 +45,4 @@ var y = (function () {
 })();
 
 /* Alternate active buttons on an interval, 1000 = 1 sec */
-var t = setInterval(y, time);
+var t = setInterval(setNextButton, time);
