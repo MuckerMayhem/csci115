@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="game.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="main.js"></script>
 </head>
 <body>
@@ -14,51 +15,57 @@
     <h1 class="project-name">CSCI 115 Project</h1>
     <h2 class="project-tagline">Basic HTML and Javascript</h2>
 
-    <a href="game.html" class="btn">Play</a>
-
 
 </section>
 
 <section class="main-content">
-    <h2>Hello</h2>
-
-    <p>This is the main page, there isn't much here because I spent 85% of the time making this site on the game.</p>
-
-    <p>This site was made to demonstrate what was learned throughout the course.</p>
-
-    <h3 id="markdown">Game Information</h3>
-
-    <p>The game is a simplified version of whacka-mole that increases in difficulty as you gain more points.</p>
-    <p>Difficulty increase begins after gaining your first 5 points.</p>
-    <p>Two settings exist, a speed multiplier, which changes how quickly the active button is changed by a multiple of the input,</p>
-    <p>and points per hit, which is how many points are gained every time an active button is clicked.</p>
-
-    <p class="points">Points:</p>
-    <p id="points">0</p>
-    <div id="game">
-        <button id="but0" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but1" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but2" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but3" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but4" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but5" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but6" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but7" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but8" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but9" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but10" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but11" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but12" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but13" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but14" class="btn" onclick=clickButton(this.id)>Button</button>
-        <button id="but15" class="btn" onclick=clickButton(this.id)>Button</button>
+    <div data-aos="zoom-out-up">
+        <h2>Hello</h2>
     </div>
 
-    <section class="settings">
-        <p>Speed Increase Multiplier: <input id="speed" type="number" value="1.5"></input> </p>
-        <p>Points per hit: <input id="pph" type="number" value="1"></input></p>
-    </section>
-    <h1 id="d">Text</h1>
+    <div data-aos="fade-up"
+         data-aos-anchor-placement="top-bottom">
+        <p>This is the main page, there isn't much here because I spent 85% of the time making this site on the game.</p>
+
+        <p>This site was made to demonstrate what was learned throughout the course.</p>
+    </div>
+    <h3 data-aos="zoom-out-up">Game Information</h3>
+
+    <div data-aos="fade-up"
+         data-aos-anchor-placement="top-bottom">
+        <p>The game is a simplified version of whacka-mole that increases in difficulty as you gain more points.</p>
+        <p>Difficulty increase begins after gaining your first 5 points.</p>
+        <p>Two settings exist, a speed multiplier, which changes how quickly the active button is changed by a multiple of the input,</p>
+        <p>and points per hit, which is how many points are gained every time an active button is clicked.</p>
+    </div>
+
+    <div data-aos="zoom-out-right">
+        <p class="points">Points:</p>
+        <p id="points">0</p>
+        <div  id="game">
+            <button id="but0" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but1" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but2" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but3" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but4" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but5" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but6" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but7" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but8" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but9" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but10" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but11" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but12" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but13" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but14" class="btn" onclick=clickButton(this.id)>Button</button>
+            <button id="but15" class="btn" onclick=clickButton(this.id)>Button</button>
+        </div>
+
+        <section class="settings">
+            <p>Speed Increase Multiplier: <input id="speed" type="number" value="1.5"></input> </p>
+            <p>Points per hit: <input id="pph" type="number" value="1"></input></p>
+        </section>
+    </div>
 
     <footer class="site-footer">
 
@@ -68,6 +75,9 @@
     </footer>
 </section>
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

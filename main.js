@@ -18,7 +18,7 @@ var clickButton = (function () {
             // increase speed of changing buttons once we hit 5 or more points.
             if (document.getElementById("points").innerHTML >= 5) {
                 clearInterval(t);
-                //decrease time it takes for a button to switch without being hit every time we hit an active button.
+                //decrease time it takes for the active button to switch positions.
                 time = time - document.getElementById("points").innerHTML * document.getElementById("speed").value;
                 t = setInterval(setNextButton, time);
             }
